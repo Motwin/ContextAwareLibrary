@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>MobileCountryCode</key>
+	<false/>
+	<key>MobileNetworkCode</key>
+	<false/>
+	<key>TimeZone</key>
+	<true/>
+	<key>Language</key>
+	<true/>
+	<key>DeviceOS</key>
+	<true/>
+	<key>DeviceOSVersion</key>
+	<true/>
+	<key>DeviceType</key>
+	<true/>
+	<key>AppName</key>
+	<false/>
+	<key>AppVersion</key>
+	<false/>
+	<key>UserAgent</key>
+	<false/>
+	<key>DataNetworkType</key>
+	<false/>
+	<key>ScreenOrientation</key>
+	<false/>
+	<key>CrashEvent</key>
+	<false/>
+	<key>AccelerometerData</key>
+	<dict>
+		<key>Activated</key>
+		<false/>
+		<key>Periodicity</key>
+		<integer>30</integer>
+	</dict>
+	<key>BatteryLevel</key>
+	<dict>
+		<key>Activated</key>
+		<false/>
+		<key>Periodicity</key>
+		<integer>30</integer>
+	</dict>
+	<key>Geolocation</key>
+	<dict>
+		<key>Activated</key>
+		<true/>
+		<key>Distance</key>
+		<integer>1000</integer>
+		<key>Accuracy</key>
+		<integer>100</integer>
+	</dict>
+	<key>PeriodicGeolocation</key>
+	<dict>
+		<key>Activated</key>
+		<true/>
+		<key>Periodicity</key>
+		<integer>120</integer>
+		<key>Accuracy</key>
+		<integer>100</integer>
+	</dict>
+</dict>
+</plist>

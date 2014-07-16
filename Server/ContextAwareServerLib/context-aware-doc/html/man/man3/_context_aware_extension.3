@@ -1,0 +1,173 @@
+.TH "_context_aware_extension" 3 "Wed Jul 16 2014" "Version ${project.version}" "context-aware-doc" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+_context_aware_extension \- ContextAware Server Developement Guide 
+.PP
+The Motwin Context Awareness library is a messaging-based library that provides an API to collect Context information coming from mobile devices, and to report Context information inferred from server side context (may come from SI data, or can be deducted from the server side application status)\&.
+.PP
+The entry point of this API is the ContextDispatcher\&. It provides 3 methods : 
+.PD 0
+
+.IP "\(bu" 2
+reportEvent(ContextElement<?> aContextElement) 
+.IP "\(bu" 2
+subscribeHandler(Object aHandler) 
+.IP "\(bu" 2
+unsubscribeHandler(Object aHandler)
+.PP
+A ContextElement is composed of a type, and a content, that can be of any type\&.
+.PP
+The ContextDispatcher will dispatch all ContextElements to the subscribed handlers\&. The reportEvent method is automatically called when receiving ContextElement from mobile devices\&. It can be called programmatically from server side application\&.
+.SH "How to import ContextAwareness library in my application"
+.PP
+To use ContextAware library in your application server side, you need to add the following import to your application\&.xml : 
+.PP
+.nf
+<import resource='classpath:META-INF/motwin/motwin-context\&.xml'/>
+
+.fi
+.PP
+.SH "How to handle an event"
+.PP
+A ContextElement handler doesn't require to implement any specific interface\&. In fact, the ContextAware library is based on Guava's event bus\&. See https://code.google.com/p/guava-libraries/wiki/EventBusExplained\&.
+.br
+ Your handler only requires one method, annotated with @Subscribe, which will be called each time a ContextElement is received by the ContextDispatcher\&. Here is an example of ContextElement handler : 
+.PP
+.nf
+@Subscribe
+public void onContextEventHandler(final ContextElement<?> anEvent) {
+
+    String installationId;
+    installationId = anEvent\&.getInstallationId();
+
+    String eventType;
+    eventType = anEvent\&.getContextElementType();
+
+    Object eventData;
+    eventData = anEvent\&.getContextElementData();
+}
+
+.fi
+.PP
+ You can use the event type string, or the event data class to determine the kind of context element, and how to handle it\&.
+.PP
+\fBRemarks:\fP
+.RS 4
+You can define your own ContextElement data\&. if you do so, you will need to declare it as serializable in your application\&.xml, as follows : 
+.PP
+.nf
+<channel:serializable name='MyCustomContextData' class='com\&.motwin\&.context\&.MyCustomContextData' />
+
+.fi
+.PP
+.RE
+.PP
+.SH "How to register a ContextElement Handler"
+.PP
+To register you ContextElement handler, you need to get an instance of the ContextDispatcher, and call subscribeHandler\&.
+.br
+ To get the Dispatcher instance, you can either use the static ContextUtils\&.getContextDispatcherOrDefault method, or use @Autowire annotation\&.
+.br
+ 
+.br
+ Another option is to use the Motwin context namespace and declare it in your application\&.xml as follows : 
+.PP
+.nf
+<beans xmlns='http://www\&.springframework\&.org/schema/beans'
+    xmlns:xsi='http://www\&.w3\&.org/2001/XMLSchema-instance' xmlns:context='http://www\&.springframework\&.org/schema/context'
+    xmlns:util='http://www\&.springframework\&.org/schema/util' xmlns:osgi='http://www\&.springframework\&.org/schema/osgi'
+    xmlns:ctx='http://central\&.motwin\&.net/schema/context'
+    xsi:schemaLocation='http://www\&.springframework\&.org/schema/beans http://www\&.springframework\&.org/schema/beans/spring-beans-3\&.0\&.xsd
+         http://www\&.springframework\&.org/schema/context http://www\&.springframework\&.org/schema/context/spring-context\&.xsd
+        http://www\&.springframework\&.org/schema/util http://www\&.springframework\&.org/schema/util/spring-util\&.xsd
+        http://www\&.springframework\&.org/schema/osgi http://www\&.springframework\&.org/schema/osgi/spring-osgi\&.xsd
+        http://central\&.motwin\&.net/schema/context http://central\&.motwin\&.net/schema/context\&.xsd'>
+            
+    <import resource='classpath:META-INF/motwin/motwin-context\&.xml'/>
+
+    <bean id='contextHandlerBeanId1' name='contextHandlerBeanName1'
+        class='com\&.motwin\&.context\&.extension\&.namespace\&.parser\&.test\&.DummyContextHandler'>
+    </bean>
+    
+    <ctx:handler id='contextHandlerId1' ref='contextHandlerBeanId1'></ctx:handler>
+
+    <ctx:handler id='contextHandlerId2'>
+        <bean id='contextHandlerBeanId2' name='contextHandlerBeanName2'
+            class='com\&.motwin\&.context\&.extension\&.namespace\&.parser\&.test\&.DummyContextHandler'>
+        </bean>
+    </ctx:handler>
+
+    <ctx:handler id='contextHandlerId3'>
+        <ref bean='contextHandlerBeanId1' />
+    </ctx:handler>
+
+    <ctx:handler id='contextHandlerId4'
+        class='com\&.motwin\&.context\&.extension\&.namespace\&.parser\&.test\&.ClassAttributeContextHandler'></ctx:handler>
+
+.fi
+.PP
+.PP
+The context library namespace is : 
+.PP
+.nf
+xmlns:ctx='http://central\&.motwin\&.net/schema/context'
+http://central\&.motwin\&.net/schema/context http://central\&.motwin\&.net/schema/context\&.xsd
+
+.fi
+.PP
+.PP
+The hander tag allows to declare and subscribe a new context handler\&. As standard bean definition, you can use class, ref, or inner bean definition to create the instance of handler\&.
+.SH "How to publish an event"
+.PP
+ContextElement can be published programmatically server side\&. To do so, use the instance of ContextDispatcher, and call the method reportEvent(ContextElement<?> aEvent), as shown below
+.br
+ 
+.PP
+.nf
+ContextElement<MyContextData> contextElement;
+contextElement = new ContextElement();
+contextElement\&.setType('myContextElementType');
+contextElement\&.setData(data);
+
+contextDispatcher\&.reportEvent(contextElement);
+
+.fi
+.PP
+.SS "Predefined context collectors interceptors"
+The Context Aware library provides some predefined interceptors that will collect context information on incoming mobile collection\&.
+.br
+ The available interceptors are : 
+.PD 0
+
+.IP "\(bu" 2
+AppNameCollector : reports the application name as context element 
+.IP "\(bu" 2
+AppVersionCollector : reports the application version as context element 
+.IP "\(bu" 2
+DeviceIdCollector : reports the device id as context element 
+.IP "\(bu" 2
+DeviceSystemCollector : reports the device system as context element 
+.IP "\(bu" 2
+DeviceTypeCollector : reports the device type as context element 
+.IP "\(bu" 2
+DeviceVersionCollector : reports the device version as context element 
+.IP "\(bu" 2
+UserAgentCollector : reports the user agent as context element
+.PP
+To activate these collectors, you just need to declare them in the interceptor chain in you application configuration as follows : 
+.PP
+.nf
+<channel:interceptors>
+    <channel:interceptor class='com\&.motwin\&.context\&.collector\&.AppNameCollector'/>
+    <channel:interceptor class='com\&.motwin\&.context\&.collector\&.AppVersionCollector' />
+    <channel:interceptor class='com\&.motwin\&.context\&.collector\&.DeviceIdCollector' />
+    <channel:interceptor class='com\&.motwin\&.context\&.collector\&.DeviceSystemCollector' />
+    <channel:interceptor class='com\&.motwin\&.context\&.collector\&.DeviceTypeCollector' />
+    <channel:interceptor class='com\&.motwin\&.context\&.collector\&.DeviceVersionCollector' />
+    <channel:interceptor class='com\&.motwin\&.context\&.collector\&.UserAgentCollector' />
+</channel:interceptors>
+
+.fi
+.PP
+ 

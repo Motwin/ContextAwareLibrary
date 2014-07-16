@@ -1,0 +1,29 @@
+<!--
+/**
+ * Copyright Motwin Inc. - 2013
+ * http://www.motwin.com
+ * 
+ * All rights reserved.
+ */
+-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:channels="http://central.motwin.net/schema/beans/application/3.3.0"
+	xmlns:messages="http://central.motwin.net/schema/beans/messaging/3.3.0"
+	xmlns:requests="http://central.motwin.net/schema/beans/requesting/3.3.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                     http://central.motwin.net/schema/beans/application/3.3.0 http://central.motwin.net/schema/beans/application-3.3.0.xsd
+                     http://central.motwin.net/schema/beans/messaging/3.3.0 http://central.motwin.net/schema/beans/messaging-3.3.0.xsd
+                     http://central.motwin.net/schema/beans/requesting/3.3.0 http://central.motwin.net/schema/beans/requesting-3.3.0.xsd">
+
+	<channels:serializable name="ContextElement"
+		class="com.motwin.context.model.ContextElement" />
+
+	<channels:serializable name="GeoLocData"
+		class="com.motwin.context.model.GeoLocData" />
+
+	<channels:serializable name="AccelerometerData"
+		class="com.motwin.context.model.AccelerometerData" />
+
+</beans>

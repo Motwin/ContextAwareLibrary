@@ -1,0 +1,1181 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		151CD545181E545500E6DD00 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 878FE77D16B6BC620062221B /* libstdc++.dylib */; };
+		151CD547181E545500E6DD00 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 151CD546181E545500E6DD00 /* libstdc++.6.0.9.dylib */; };
+		152D830C171C4271008F8654 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 152D830B171C4271008F8654 /* CoreData.framework */; };
+		152D832B171ED3E2008F8654 /* ContextElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D832A171ED3E2008F8654 /* ContextElement.m */; };
+		152D832C171ED3E2008F8654 /* ContextElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D832A171ED3E2008F8654 /* ContextElement.m */; };
+		152D8333171ED42E008F8654 /* OnChangeCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D8332171ED42D008F8654 /* OnChangeCollector.m */; };
+		152D8334171ED42E008F8654 /* OnChangeCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D8332171ED42D008F8654 /* OnChangeCollector.m */; };
+		152D833D171ED47A008F8654 /* CrashEventCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D8336171ED45F008F8654 /* CrashEventCollector.m */; };
+		152D833E171ED47A008F8654 /* CrashEventCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D8336171ED45F008F8654 /* CrashEventCollector.m */; };
+		152D833F171ED47A008F8654 /* DataNetworkTypeCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D8338171ED462008F8654 /* DataNetworkTypeCollector.m */; };
+		152D8340171ED47A008F8654 /* DataNetworkTypeCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D8338171ED462008F8654 /* DataNetworkTypeCollector.m */; };
+		152D8341171ED47A008F8654 /* GeolocationCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D833A171ED469008F8654 /* GeolocationCollector.m */; };
+		152D8342171ED47A008F8654 /* GeolocationCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D833A171ED469008F8654 /* GeolocationCollector.m */; };
+		152D8343171ED47A008F8654 /* ScreenOrientationCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D833C171ED473008F8654 /* ScreenOrientationCollector.m */; };
+		152D8344171ED47A008F8654 /* ScreenOrientationCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D833C171ED473008F8654 /* ScreenOrientationCollector.m */; };
+		152D8348171EE1C7008F8654 /* GeoLocData.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D8347171EE1C7008F8654 /* GeoLocData.m */; };
+		152D8349171EE1C7008F8654 /* GeoLocData.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D8347171EE1C7008F8654 /* GeoLocData.m */; };
+		152D834C171EE226008F8654 /* OneShotCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D834B171EE225008F8654 /* OneShotCollector.m */; };
+		152D834D171EE226008F8654 /* OneShotCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D834B171EE225008F8654 /* OneShotCollector.m */; };
+		152D8350171EE23C008F8654 /* TagCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D834F171EE23B008F8654 /* TagCollector.m */; };
+		152D8351171EE23C008F8654 /* TagCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D834F171EE23B008F8654 /* TagCollector.m */; };
+		152D8366171EE29A008F8654 /* AppNameCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D8353171EE297008F8654 /* AppNameCollector.m */; };
+		152D8367171EE29A008F8654 /* AppNameCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D8353171EE297008F8654 /* AppNameCollector.m */; };
+		152D8368171EE29A008F8654 /* AppVersionCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D8355171EE297008F8654 /* AppVersionCollector.m */; };
+		152D8369171EE29A008F8654 /* AppVersionCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D8355171EE297008F8654 /* AppVersionCollector.m */; };
+		152D836A171EE29A008F8654 /* DeviceOSCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D8357171EE298008F8654 /* DeviceOSCollector.m */; };
+		152D836B171EE29A008F8654 /* DeviceOSCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D8357171EE298008F8654 /* DeviceOSCollector.m */; };
+		152D836C171EE29A008F8654 /* DeviceOSVersionCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D8359171EE298008F8654 /* DeviceOSVersionCollector.m */; };
+		152D836D171EE29A008F8654 /* DeviceOSVersionCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D8359171EE298008F8654 /* DeviceOSVersionCollector.m */; };
+		152D836E171EE29A008F8654 /* DeviceTypeCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D835B171EE298008F8654 /* DeviceTypeCollector.m */; };
+		152D836F171EE29A008F8654 /* DeviceTypeCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D835B171EE298008F8654 /* DeviceTypeCollector.m */; };
+		152D8370171EE29A008F8654 /* LanguageCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D835D171EE299008F8654 /* LanguageCollector.m */; };
+		152D8371171EE29A008F8654 /* LanguageCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D835D171EE299008F8654 /* LanguageCollector.m */; };
+		152D8372171EE29A008F8654 /* MobileCountryCodeCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D835F171EE299008F8654 /* MobileCountryCodeCollector.m */; };
+		152D8373171EE29A008F8654 /* MobileCountryCodeCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D835F171EE299008F8654 /* MobileCountryCodeCollector.m */; };
+		152D8374171EE29A008F8654 /* MobileNetworkCodeCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D8361171EE299008F8654 /* MobileNetworkCodeCollector.m */; };
+		152D8375171EE29A008F8654 /* MobileNetworkCodeCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D8361171EE299008F8654 /* MobileNetworkCodeCollector.m */; };
+		152D8376171EE29A008F8654 /* TimeZoneCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D8363171EE299008F8654 /* TimeZoneCollector.m */; };
+		152D8377171EE29A008F8654 /* TimeZoneCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D8363171EE299008F8654 /* TimeZoneCollector.m */; };
+		152D8378171EE29A008F8654 /* UserAgentCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D8365171EE29A008F8654 /* UserAgentCollector.m */; };
+		152D8379171EE29A008F8654 /* UserAgentCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D8365171EE29A008F8654 /* UserAgentCollector.m */; };
+		152D837C171EE2F3008F8654 /* PeriodicCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D837B171EE2F3008F8654 /* PeriodicCollector.m */; };
+		152D837D171EE2F3008F8654 /* PeriodicCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D837B171EE2F3008F8654 /* PeriodicCollector.m */; };
+		152D8380171EE317008F8654 /* AccelerometerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D837F171EE317008F8654 /* AccelerometerData.m */; };
+		152D8381171EE317008F8654 /* AccelerometerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D837F171EE317008F8654 /* AccelerometerData.m */; };
+		152D8390171EE4EF008F8654 /* ContextAwareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D838F171EE4EF008F8654 /* ContextAwareManager.m */; };
+		152D8391171EE4F0008F8654 /* ContextAwareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D838F171EE4EF008F8654 /* ContextAwareManager.m */; };
+		155D7F54181EA79D008EFD89 /* MBReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8769F06A169C687D008A8E0A /* MBReachability.m */; };
+		155D7F55181EA79D008EFD89 /* ContextCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 8769F02C169C6743008A8E0A /* ContextCollector.m */; };
+		155D7F56181EA79D008EFD89 /* ContextElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D832A171ED3E2008F8654 /* ContextElement.m */; };
+		155D7F57181EA79D008EFD89 /* OnChangeCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D8332171ED42D008F8654 /* OnChangeCollector.m */; };
+		155D7F58181EA79D008EFD89 /* CrashEventCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D8336171ED45F008F8654 /* CrashEventCollector.m */; };
+		155D7F59181EA79D008EFD89 /* DataNetworkTypeCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D8338171ED462008F8654 /* DataNetworkTypeCollector.m */; };
+		155D7F5A181EA79D008EFD89 /* GeolocationCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D833A171ED469008F8654 /* GeolocationCollector.m */; };
+		155D7F5B181EA79D008EFD89 /* ScreenOrientationCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D833C171ED473008F8654 /* ScreenOrientationCollector.m */; };
+		155D7F5C181EA79D008EFD89 /* GeoLocData.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D8347171EE1C7008F8654 /* GeoLocData.m */; };
+		155D7F5D181EA79D008EFD89 /* OneShotCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D834B171EE225008F8654 /* OneShotCollector.m */; };
+		155D7F5E181EA79D008EFD89 /* TagCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D834F171EE23B008F8654 /* TagCollector.m */; };
+		155D7F5F181EA79D008EFD89 /* AppNameCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D8353171EE297008F8654 /* AppNameCollector.m */; };
+		155D7F60181EA79D008EFD89 /* AppVersionCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D8355171EE297008F8654 /* AppVersionCollector.m */; };
+		155D7F61181EA79D008EFD89 /* DeviceOSCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D8357171EE298008F8654 /* DeviceOSCollector.m */; };
+		155D7F62181EA79D008EFD89 /* DeviceOSVersionCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D8359171EE298008F8654 /* DeviceOSVersionCollector.m */; };
+		155D7F63181EA79D008EFD89 /* DeviceTypeCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D835B171EE298008F8654 /* DeviceTypeCollector.m */; };
+		155D7F64181EA79D008EFD89 /* LanguageCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D835D171EE299008F8654 /* LanguageCollector.m */; };
+		155D7F65181EA79D008EFD89 /* MobileCountryCodeCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D835F171EE299008F8654 /* MobileCountryCodeCollector.m */; };
+		155D7F66181EA79D008EFD89 /* MobileNetworkCodeCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D8361171EE299008F8654 /* MobileNetworkCodeCollector.m */; };
+		155D7F67181EA79D008EFD89 /* TimeZoneCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D8363171EE299008F8654 /* TimeZoneCollector.m */; };
+		155D7F68181EA79D008EFD89 /* UserAgentCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D8365171EE29A008F8654 /* UserAgentCollector.m */; };
+		155D7F69181EA79D008EFD89 /* PeriodicCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D837B171EE2F3008F8654 /* PeriodicCollector.m */; };
+		155D7F6A181EA79D008EFD89 /* AccelerometerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D837F171EE317008F8654 /* AccelerometerData.m */; };
+		155D7F6B181EA79D008EFD89 /* ContextAwareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 152D838F171EE4EF008F8654 /* ContextAwareManager.m */; };
+		155D7F6C181EA79D008EFD89 /* AccelerometerPeriodicCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 158F89911760DAD50018ACFF /* AccelerometerPeriodicCollector.m */; };
+		155D7F6D181EA79D008EFD89 /* BatteryLevelPeriodicCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 158F89981760E2300018ACFF /* BatteryLevelPeriodicCollector.m */; };
+		155D7F6E181EA79D008EFD89 /* GeolocationPeriodicCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 158F899A1760E2300018ACFF /* GeolocationPeriodicCollector.m */; };
+		155D7F70181EA79D008EFD89 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 151CD546181E545500E6DD00 /* libstdc++.6.0.9.dylib */; };
+		155D7F71181EA79D008EFD89 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 878FE77D16B6BC620062221B /* libstdc++.dylib */; };
+		155D7F72181EA79D008EFD89 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8769F06C169C6904008A8E0A /* UIKit.framework */; };
+		155D7F73181EA79D008EFD89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8769EFED169C6018008A8E0A /* Foundation.framework */; };
+		155D7F74181EA79D008EFD89 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE0DFE616B5AE4B00A9F29D /* OCMock.framework */; };
+		158F89921760DAD50018ACFF /* AccelerometerPeriodicCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 158F89911760DAD50018ACFF /* AccelerometerPeriodicCollector.m */; };
+		158F899B1760E2300018ACFF /* BatteryLevelPeriodicCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 158F89981760E2300018ACFF /* BatteryLevelPeriodicCollector.m */; };
+		158F899C1760E2300018ACFF /* GeolocationPeriodicCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 158F899A1760E2300018ACFF /* GeolocationPeriodicCollector.m */; };
+		8769128416B7C3D3007245F4 /* ContextAware.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8769F07D169C76DD008A8E0A /* ContextAware.plist */; };
+		8769128A16B80C04007245F4 /* LanguageCollectorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8769128916B80C04007245F4 /* LanguageCollectorTest.m */; };
+		8769EFEE169C6018008A8E0A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8769EFED169C6018008A8E0A /* Foundation.framework */; };
+		8769F033169C6743008A8E0A /* ContextCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 8769F02C169C6743008A8E0A /* ContextCollector.m */; };
+		8769F06D169C6904008A8E0A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8769F06C169C6904008A8E0A /* UIKit.framework */; };
+		876C37EC16A55B2D00FBB1D3 /* MBReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8769F06A169C687D008A8E0A /* MBReachability.m */; };
+		878FE77616B6B9A10062221B /* ContextAwareManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 878FE77516B6B9A10062221B /* ContextAwareManagerTest.m */; };
+		878FE77816B6BBD30062221B /* ContextCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 8769F02C169C6743008A8E0A /* ContextCollector.m */; };
+		878FE77C16B6BC530062221B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 878FE77B16B6BC530062221B /* libz.dylib */; };
+		878FE77E16B6BC620062221B /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 878FE77D16B6BC620062221B /* libstdc++.dylib */; };
+		878FE78016B6BC6E0062221B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 878FE77F16B6BC6E0062221B /* SystemConfiguration.framework */; };
+		878FE78216B6BC740062221B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 878FE78116B6BC740062221B /* CFNetwork.framework */; };
+		878FE78416B6BC980062221B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 878FE78316B6BC980062221B /* Security.framework */; };
+		878FE78616B6BCB10062221B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 878FE78516B6BCB10062221B /* libsqlite3.dylib */; };
+		878FE78916B6DCB10062221B /* ContextCollectorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 878FE78816B6DCB10062221B /* ContextCollectorTest.m */; };
+		9B29F2B116B59011009C336B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8769F06C169C6904008A8E0A /* UIKit.framework */; };
+		9B29F2B216B59011009C336B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8769EFED169C6018008A8E0A /* Foundation.framework */; };
+		9B29F2B416B59011009C336B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B29F2B316B59011009C336B /* CoreGraphics.framework */; };
+		9BE0DFC816B5997200A9F29D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE0DFC616B5994100A9F29D /* QuartzCore.framework */; };
+		9BE0DFDF16B5A92900A9F29D /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE0DFD716B5A92900A9F29D /* libOCMock.a */; };
+		9BE0DFE516B5AE3D00A9F29D /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE0DFE416B5AE3D00A9F29D /* GHUnitIOS.framework */; };
+		9BE0DFE816B5AF2700A9F29D /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE0DFE616B5AE4B00A9F29D /* OCMock.framework */; };
+		9BE0DFEE16B5BB9F00A9F29D /* ContextAwareTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9BE0DFEA16B5BB9F00A9F29D /* ContextAwareTests-Info.plist */; };
+		9BE0DFEF16B5BB9F00A9F29D /* GHUnitIOSTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE0DFEC16B5BB9F00A9F29D /* GHUnitIOSTestMain.m */; };
+		9BE0DFF016B5BB9F00A9F29D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BE0DFED16B5BB9F00A9F29D /* InfoPlist.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		152D839D1721923B008F8654 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 152D83961721923A008F8654 /* MotwinPlatform.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 820BBDF714D7EA5400355117;
+			remoteInfo = MotwinPlatform;
+		};
+		152D839F1721923B008F8654 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 152D83961721923A008F8654 /* MotwinPlatform.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8285EB191546A19700EE13F7;
+			remoteInfo = MotwinConnectorPlugin;
+		};
+		152D83A11721923B008F8654 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 152D83961721923A008F8654 /* MotwinPlatform.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 827B712413EAF1F600F6F3BD;
+			remoteInfo = UnitTests;
+		};
+		152D83B61721943F008F8654 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 152D83961721923A008F8654 /* MotwinPlatform.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 820BBCE714D7EA5400355117;
+			remoteInfo = MotwinPlatform;
+		};
+		155D7F52181EA79D008EFD89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 152D83961721923A008F8654 /* MotwinPlatform.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 820BBCE714D7EA5400355117;
+			remoteInfo = MotwinPlatform;
+		};
+		155D7F7E181EA79D008EFD89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 152D83961721923A008F8654 /* MotwinPlatform.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 155D7F4C181EA782008EFD89;
+			remoteInfo = MotwinPlatform64;
+		};
+		8798D7C516DB63C400ABC09F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8769EFE1169C6018008A8E0A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8769EFE9169C6018008A8E0A;
+			remoteInfo = ContextAwareLib;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		151CD546181E545500E6DD00 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
+		152D830B171C4271008F8654 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		152D8329171ED3E2008F8654 /* ContextElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextElement.h; path = Classes/ContextElement.h; sourceTree = "<group>"; };
+		152D832A171ED3E2008F8654 /* ContextElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextElement.m; path = Classes/ContextElement.m; sourceTree = "<group>"; };
+		152D8331171ED42C008F8654 /* OnChangeCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OnChangeCollector.h; path = Classes/OnChangeCollector.h; sourceTree = "<group>"; };
+		152D8332171ED42D008F8654 /* OnChangeCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OnChangeCollector.m; path = Classes/OnChangeCollector.m; sourceTree = "<group>"; };
+		152D8335171ED45F008F8654 /* CrashEventCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrashEventCollector.h; path = Classes/CrashEventCollector.h; sourceTree = SOURCE_ROOT; };
+		152D8336171ED45F008F8654 /* CrashEventCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrashEventCollector.m; path = Classes/CrashEventCollector.m; sourceTree = SOURCE_ROOT; };
+		152D8337171ED460008F8654 /* DataNetworkTypeCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataNetworkTypeCollector.h; path = Classes/DataNetworkTypeCollector.h; sourceTree = SOURCE_ROOT; };
+		152D8338171ED462008F8654 /* DataNetworkTypeCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataNetworkTypeCollector.m; path = Classes/DataNetworkTypeCollector.m; sourceTree = SOURCE_ROOT; };
+		152D8339171ED465008F8654 /* GeolocationCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeolocationCollector.h; path = Classes/GeolocationCollector.h; sourceTree = SOURCE_ROOT; };
+		152D833A171ED469008F8654 /* GeolocationCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeolocationCollector.m; path = Classes/GeolocationCollector.m; sourceTree = SOURCE_ROOT; };
+		152D833B171ED46E008F8654 /* ScreenOrientationCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScreenOrientationCollector.h; path = Classes/ScreenOrientationCollector.h; sourceTree = SOURCE_ROOT; };
+		152D833C171ED473008F8654 /* ScreenOrientationCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScreenOrientationCollector.m; path = Classes/ScreenOrientationCollector.m; sourceTree = SOURCE_ROOT; };
+		152D8346171EE1C7008F8654 /* GeoLocData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeoLocData.h; path = Classes/GeoLocData.h; sourceTree = "<group>"; };
+		152D8347171EE1C7008F8654 /* GeoLocData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeoLocData.m; path = Classes/GeoLocData.m; sourceTree = "<group>"; };
+		152D834A171EE225008F8654 /* OneShotCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OneShotCollector.h; path = Classes/OneShotCollector.h; sourceTree = "<group>"; };
+		152D834B171EE225008F8654 /* OneShotCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OneShotCollector.m; path = Classes/OneShotCollector.m; sourceTree = "<group>"; };
+		152D834E171EE23B008F8654 /* TagCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TagCollector.h; path = Classes/TagCollector.h; sourceTree = SOURCE_ROOT; };
+		152D834F171EE23B008F8654 /* TagCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TagCollector.m; path = Classes/TagCollector.m; sourceTree = SOURCE_ROOT; };
+		152D8352171EE297008F8654 /* AppNameCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppNameCollector.h; path = Classes/AppNameCollector.h; sourceTree = SOURCE_ROOT; };
+		152D8353171EE297008F8654 /* AppNameCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppNameCollector.m; path = Classes/AppNameCollector.m; sourceTree = SOURCE_ROOT; };
+		152D8354171EE297008F8654 /* AppVersionCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppVersionCollector.h; path = Classes/AppVersionCollector.h; sourceTree = SOURCE_ROOT; };
+		152D8355171EE297008F8654 /* AppVersionCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppVersionCollector.m; path = Classes/AppVersionCollector.m; sourceTree = SOURCE_ROOT; };
+		152D8356171EE298008F8654 /* DeviceOSCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceOSCollector.h; path = Classes/DeviceOSCollector.h; sourceTree = SOURCE_ROOT; };
+		152D8357171EE298008F8654 /* DeviceOSCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceOSCollector.m; path = Classes/DeviceOSCollector.m; sourceTree = SOURCE_ROOT; };
+		152D8358171EE298008F8654 /* DeviceOSVersionCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceOSVersionCollector.h; path = Classes/DeviceOSVersionCollector.h; sourceTree = SOURCE_ROOT; };
+		152D8359171EE298008F8654 /* DeviceOSVersionCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceOSVersionCollector.m; path = Classes/DeviceOSVersionCollector.m; sourceTree = SOURCE_ROOT; };
+		152D835A171EE298008F8654 /* DeviceTypeCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceTypeCollector.h; path = Classes/DeviceTypeCollector.h; sourceTree = SOURCE_ROOT; };
+		152D835B171EE298008F8654 /* DeviceTypeCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceTypeCollector.m; path = Classes/DeviceTypeCollector.m; sourceTree = SOURCE_ROOT; };
+		152D835C171EE298008F8654 /* LanguageCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LanguageCollector.h; path = Classes/LanguageCollector.h; sourceTree = SOURCE_ROOT; };
+		152D835D171EE299008F8654 /* LanguageCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LanguageCollector.m; path = Classes/LanguageCollector.m; sourceTree = SOURCE_ROOT; };
+		152D835E171EE299008F8654 /* MobileCountryCodeCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MobileCountryCodeCollector.h; path = Classes/MobileCountryCodeCollector.h; sourceTree = SOURCE_ROOT; };
+		152D835F171EE299008F8654 /* MobileCountryCodeCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MobileCountryCodeCollector.m; path = Classes/MobileCountryCodeCollector.m; sourceTree = SOURCE_ROOT; };
+		152D8360171EE299008F8654 /* MobileNetworkCodeCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MobileNetworkCodeCollector.h; path = Classes/MobileNetworkCodeCollector.h; sourceTree = SOURCE_ROOT; };
+		152D8361171EE299008F8654 /* MobileNetworkCodeCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MobileNetworkCodeCollector.m; path = Classes/MobileNetworkCodeCollector.m; sourceTree = SOURCE_ROOT; };
+		152D8362171EE299008F8654 /* TimeZoneCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimeZoneCollector.h; path = Classes/TimeZoneCollector.h; sourceTree = SOURCE_ROOT; };
+		152D8363171EE299008F8654 /* TimeZoneCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeZoneCollector.m; path = Classes/TimeZoneCollector.m; sourceTree = SOURCE_ROOT; };
+		152D8364171EE29A008F8654 /* UserAgentCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserAgentCollector.h; path = Classes/UserAgentCollector.h; sourceTree = SOURCE_ROOT; };
+		152D8365171EE29A008F8654 /* UserAgentCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserAgentCollector.m; path = Classes/UserAgentCollector.m; sourceTree = SOURCE_ROOT; };
+		152D837A171EE2F3008F8654 /* PeriodicCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeriodicCollector.h; path = Classes/PeriodicCollector.h; sourceTree = "<group>"; };
+		152D837B171EE2F3008F8654 /* PeriodicCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeriodicCollector.m; path = Classes/PeriodicCollector.m; sourceTree = "<group>"; };
+		152D837E171EE317008F8654 /* AccelerometerData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccelerometerData.h; path = Classes/AccelerometerData.h; sourceTree = "<group>"; };
+		152D837F171EE317008F8654 /* AccelerometerData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccelerometerData.m; path = Classes/AccelerometerData.m; sourceTree = "<group>"; };
+		152D838E171EE4EF008F8654 /* ContextAwareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextAwareManager.h; path = Classes/ContextAwareManager.h; sourceTree = "<group>"; };
+		152D838F171EE4EF008F8654 /* ContextAwareManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextAwareManager.m; path = Classes/ContextAwareManager.m; sourceTree = "<group>"; };
+		152D83961721923A008F8654 /* MotwinPlatform.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MotwinPlatform.xcodeproj; path = ../SDK/MotwinPlatform.xcodeproj; sourceTree = "<group>"; };
+		155D7F7A181EA79D008EFD89 /* libContextAwareLib64.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libContextAwareLib64.a; path = "libContextAwareLib copy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		158F89901760DAD50018ACFF /* AccelerometerPeriodicCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccelerometerPeriodicCollector.h; path = Classes/AccelerometerPeriodicCollector.h; sourceTree = SOURCE_ROOT; };
+		158F89911760DAD50018ACFF /* AccelerometerPeriodicCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccelerometerPeriodicCollector.m; path = Classes/AccelerometerPeriodicCollector.m; sourceTree = SOURCE_ROOT; };
+		158F89971760E2300018ACFF /* BatteryLevelPeriodicCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BatteryLevelPeriodicCollector.h; path = Classes/BatteryLevelPeriodicCollector.h; sourceTree = SOURCE_ROOT; };
+		158F89981760E2300018ACFF /* BatteryLevelPeriodicCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BatteryLevelPeriodicCollector.m; path = Classes/BatteryLevelPeriodicCollector.m; sourceTree = SOURCE_ROOT; };
+		158F89991760E2300018ACFF /* GeolocationPeriodicCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeolocationPeriodicCollector.h; path = Classes/GeolocationPeriodicCollector.h; sourceTree = SOURCE_ROOT; };
+		158F899A1760E2300018ACFF /* GeolocationPeriodicCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeolocationPeriodicCollector.m; path = Classes/GeolocationPeriodicCollector.m; sourceTree = SOURCE_ROOT; };
+		15963CBB177C42E0004BD8F2 /* MakeDoc.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = MakeDoc.sh; path = Documentation/MakeDoc.sh; sourceTree = "<group>"; };
+		15963CBC177C42E0004BD8F2 /* ContextAwareLib.DoxyFile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ContextAwareLib.DoxyFile; path = Documentation/ContextAwareLib.DoxyFile; sourceTree = "<group>"; };
+		15963CBD177C464A004BD8F2 /* Footer.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; name = Footer.html; path = Documentation/Footer.html; sourceTree = "<group>"; };
+		15963CBE177C464A004BD8F2 /* loadDocSet.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = loadDocSet.scpt; path = Documentation/loadDocSet.scpt; sourceTree = "<group>"; };
+		15963CBF177C464A004BD8F2 /* macrosFilter.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = macrosFilter.py; path = Documentation/macrosFilter.py; sourceTree = "<group>"; };
+		15963CC0177C464A004BD8F2 /* MotwinLogoMicro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MotwinLogoMicro.png; path = Documentation/MotwinLogoMicro.png; sourceTree = "<group>"; };
+		15963CC1177C46A9004BD8F2 /* Main.doxy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Main.doxy; path = Documentation/Main.doxy; sourceTree = "<group>"; };
+		15ECCB73176085740001A1DE /* ContextAware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextAware.h; path = Classes/ContextAware.h; sourceTree = "<group>"; };
+		8743A2EE16AD414400A1A884 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		8769128916B80C04007245F4 /* LanguageCollectorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageCollectorTest.m; sourceTree = "<group>"; };
+		8769EFEA169C6018008A8E0A /* libMotwinContextAwareLibDebug-iphoneos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libMotwinContextAwareLibDebug-iphoneos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8769EFED169C6018008A8E0A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8769EFFC169C6018008A8E0A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		8769F02B169C6743008A8E0A /* ContextCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextCollector.h; path = Classes/ContextCollector.h; sourceTree = "<group>"; };
+		8769F02C169C6743008A8E0A /* ContextCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextCollector.m; path = Classes/ContextCollector.m; sourceTree = "<group>"; };
+		8769F069169C687D008A8E0A /* MBReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBReachability.h; sourceTree = "<group>"; };
+		8769F06A169C687D008A8E0A /* MBReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBReachability.m; sourceTree = "<group>"; };
+		8769F06C169C6904008A8E0A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8769F07D169C76DD008A8E0A /* ContextAware.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ContextAware.plist; sourceTree = "<group>"; };
+		878FE77516B6B9A10062221B /* ContextAwareManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextAwareManagerTest.m; sourceTree = "<group>"; };
+		878FE77B16B6BC530062221B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		878FE77D16B6BC620062221B /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		878FE77F16B6BC6E0062221B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		878FE78116B6BC740062221B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		878FE78316B6BC980062221B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		878FE78516B6BCB10062221B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		878FE78816B6DCB10062221B /* ContextCollectorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextCollectorTest.m; sourceTree = "<group>"; };
+		8798D7CC16DB689F00ABC09F /* ContextAwareConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextAwareConstants.h; path = Classes/ContextAwareConstants.h; sourceTree = "<group>"; };
+		87BCF8FF16B17A7300158B36 /* ContextAwareLib-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ContextAwareLib-Prefix.pch"; path = "Classes/ContextAwareLib-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		9B29F2AF16B59011009C336B /* ContextAwareTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContextAwareTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B29F2B316B59011009C336B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9BE0DFC616B5994100A9F29D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9BE0DFD716B5A92900A9F29D /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = Libraries/libOCMock.a; sourceTree = "<group>"; };
+		9BE0DFD916B5A92900A9F29D /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
+		9BE0DFDA16B5A92900A9F29D /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
+		9BE0DFDB16B5A92900A9F29D /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
+		9BE0DFDC16B5A92900A9F29D /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
+		9BE0DFDD16B5A92900A9F29D /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
+		9BE0DFDE16B5A92900A9F29D /* OCMockRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockRecorder.h; sourceTree = "<group>"; };
+		9BE0DFE416B5AE3D00A9F29D /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnitIOS.framework; path = UnitTestFrameWork/GHUnitIOS.framework; sourceTree = SOURCE_ROOT; };
+		9BE0DFE616B5AE4B00A9F29D /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = UnitTestFrameWork/OCMock.framework; sourceTree = SOURCE_ROOT; };
+		9BE0DFEA16B5BB9F00A9F29D /* ContextAwareTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ContextAwareTests-Info.plist"; sourceTree = "<group>"; };
+		9BE0DFEB16B5BB9F00A9F29D /* ContextAwareTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ContextAwareTests-Prefix.pch"; sourceTree = "<group>"; };
+		9BE0DFEC16B5BB9F00A9F29D /* GHUnitIOSTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHUnitIOSTestMain.m; sourceTree = "<group>"; };
+		9BE0DFED16B5BB9F00A9F29D /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		155D7F6F181EA79D008EFD89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				155D7F70181EA79D008EFD89 /* libstdc++.6.0.9.dylib in Frameworks */,
+				155D7F71181EA79D008EFD89 /* libstdc++.dylib in Frameworks */,
+				155D7F72181EA79D008EFD89 /* UIKit.framework in Frameworks */,
+				155D7F73181EA79D008EFD89 /* Foundation.framework in Frameworks */,
+				155D7F74181EA79D008EFD89 /* OCMock.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8769EFE7169C6018008A8E0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				151CD547181E545500E6DD00 /* libstdc++.6.0.9.dylib in Frameworks */,
+				151CD545181E545500E6DD00 /* libstdc++.dylib in Frameworks */,
+				8769F06D169C6904008A8E0A /* UIKit.framework in Frameworks */,
+				8769EFEE169C6018008A8E0A /* Foundation.framework in Frameworks */,
+				9BE0DFE816B5AF2700A9F29D /* OCMock.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B29F2AC16B59011009C336B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				152D830C171C4271008F8654 /* CoreData.framework in Frameworks */,
+				878FE78616B6BCB10062221B /* libsqlite3.dylib in Frameworks */,
+				878FE78416B6BC980062221B /* Security.framework in Frameworks */,
+				878FE78216B6BC740062221B /* CFNetwork.framework in Frameworks */,
+				878FE78016B6BC6E0062221B /* SystemConfiguration.framework in Frameworks */,
+				878FE77E16B6BC620062221B /* libstdc++.dylib in Frameworks */,
+				878FE77C16B6BC530062221B /* libz.dylib in Frameworks */,
+				9B29F2B116B59011009C336B /* UIKit.framework in Frameworks */,
+				9BE0DFC816B5997200A9F29D /* QuartzCore.framework in Frameworks */,
+				9B29F2B216B59011009C336B /* Foundation.framework in Frameworks */,
+				9B29F2B416B59011009C336B /* CoreGraphics.framework in Frameworks */,
+				9BE0DFE516B5AE3D00A9F29D /* GHUnitIOS.framework in Frameworks */,
+				9BE0DFDF16B5A92900A9F29D /* libOCMock.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		152D83971721923A008F8654 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				152D839E1721923B008F8654 /* libMotwinPlatformDebug-iphoneos.a */,
+				155D7F7F181EA79D008EFD89 /* libMotwinPlatform64.a */,
+				152D83A21721923B008F8654 /* UnitTests.app */,
+				152D83A01721923B008F8654 /* libMotwinConnectorPluginDebug-iphoneos.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		15963CB8177C42C9004BD8F2 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				15963CC1177C46A9004BD8F2 /* Main.doxy */,
+				15963CBD177C464A004BD8F2 /* Footer.html */,
+				15963CBE177C464A004BD8F2 /* loadDocSet.scpt */,
+				15963CBF177C464A004BD8F2 /* macrosFilter.py */,
+				15963CC0177C464A004BD8F2 /* MotwinLogoMicro.png */,
+				15963CBB177C42E0004BD8F2 /* MakeDoc.sh */,
+				15963CBC177C42E0004BD8F2 /* ContextAwareLib.DoxyFile */,
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+		8769EFDF169C6018008A8E0A = {
+			isa = PBXGroup;
+			children = (
+				152D83961721923A008F8654 /* MotwinPlatform.xcodeproj */,
+				15963CB8177C42C9004BD8F2 /* Documentation */,
+				8769F067169C6866008A8E0A /* Librairies */,
+				8769F037169C674B008A8E0A /* ContextCollectors */,
+				8769F026169C66ED008A8E0A /* Context */,
+				876C37C616A54D4A00FBB1D3 /* Model */,
+				8769F07D169C76DD008A8E0A /* ContextAware.plist */,
+				9B29F2B516B59011009C336B /* ContextAwareTests */,
+				8769EFEC169C6018008A8E0A /* Frameworks */,
+				8769EFF0169C6018008A8E0A /* Supporting Files */,
+				8769EFEB169C6018008A8E0A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8769EFEB169C6018008A8E0A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8769EFEA169C6018008A8E0A /* libMotwinContextAwareLibDebug-iphoneos.a */,
+				9B29F2AF16B59011009C336B /* ContextAwareTests.app */,
+				155D7F7A181EA79D008EFD89 /* libContextAwareLib64.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8769EFEC169C6018008A8E0A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				151CD546181E545500E6DD00 /* libstdc++.6.0.9.dylib */,
+				152D830B171C4271008F8654 /* CoreData.framework */,
+				8743A2EE16AD414400A1A884 /* CoreMotion.framework */,
+				8769F06C169C6904008A8E0A /* UIKit.framework */,
+				8769EFED169C6018008A8E0A /* Foundation.framework */,
+				8769EFFC169C6018008A8E0A /* SenTestingKit.framework */,
+				9B29F2B316B59011009C336B /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8769EFF0169C6018008A8E0A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				87BCF8FF16B17A7300158B36 /* ContextAwareLib-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			path = ContextAware;
+			sourceTree = "<group>";
+		};
+		8769F026169C66ED008A8E0A /* Context */ = {
+			isa = PBXGroup;
+			children = (
+				15ECCB73176085740001A1DE /* ContextAware.h */,
+				152D838E171EE4EF008F8654 /* ContextAwareManager.h */,
+				152D838F171EE4EF008F8654 /* ContextAwareManager.m */,
+				8798D7CC16DB689F00ABC09F /* ContextAwareConstants.h */,
+			);
+			name = Context;
+			sourceTree = "<group>";
+		};
+		8769F037169C674B008A8E0A /* ContextCollectors */ = {
+			isa = PBXGroup;
+			children = (
+				152D837A171EE2F3008F8654 /* PeriodicCollector.h */,
+				152D837B171EE2F3008F8654 /* PeriodicCollector.m */,
+				152D834A171EE225008F8654 /* OneShotCollector.h */,
+				152D834B171EE225008F8654 /* OneShotCollector.m */,
+				152D8331171ED42C008F8654 /* OnChangeCollector.h */,
+				152D8332171ED42D008F8654 /* OnChangeCollector.m */,
+				8769F02B169C6743008A8E0A /* ContextCollector.h */,
+				8769F02C169C6743008A8E0A /* ContextCollector.m */,
+				8769F042169C676A008A8E0A /* OneShotContextElementCollectors */,
+				8769F038169C6762008A8E0A /* OnChangeContextElementCollectors */,
+				8769F046169C6770008A8E0A /* PeriodicContextElementCollectors */,
+			);
+			name = ContextCollectors;
+			sourceTree = "<group>";
+		};
+		8769F038169C6762008A8E0A /* OnChangeContextElementCollectors */ = {
+			isa = PBXGroup;
+			children = (
+				152D834E171EE23B008F8654 /* TagCollector.h */,
+				152D834F171EE23B008F8654 /* TagCollector.m */,
+				152D8335171ED45F008F8654 /* CrashEventCollector.h */,
+				152D8336171ED45F008F8654 /* CrashEventCollector.m */,
+				152D8337171ED460008F8654 /* DataNetworkTypeCollector.h */,
+				152D8338171ED462008F8654 /* DataNetworkTypeCollector.m */,
+				152D8339171ED465008F8654 /* GeolocationCollector.h */,
+				152D833A171ED469008F8654 /* GeolocationCollector.m */,
+				152D833B171ED46E008F8654 /* ScreenOrientationCollector.h */,
+				152D833C171ED473008F8654 /* ScreenOrientationCollector.m */,
+			);
+			name = OnChangeContextElementCollectors;
+			path = Classes/OnChangeContextElement;
+			sourceTree = "<group>";
+		};
+		8769F042169C676A008A8E0A /* OneShotContextElementCollectors */ = {
+			isa = PBXGroup;
+			children = (
+				152D8352171EE297008F8654 /* AppNameCollector.h */,
+				152D8353171EE297008F8654 /* AppNameCollector.m */,
+				152D8354171EE297008F8654 /* AppVersionCollector.h */,
+				152D8355171EE297008F8654 /* AppVersionCollector.m */,
+				152D8356171EE298008F8654 /* DeviceOSCollector.h */,
+				152D8357171EE298008F8654 /* DeviceOSCollector.m */,
+				152D8358171EE298008F8654 /* DeviceOSVersionCollector.h */,
+				152D8359171EE298008F8654 /* DeviceOSVersionCollector.m */,
+				152D835A171EE298008F8654 /* DeviceTypeCollector.h */,
+				152D835B171EE298008F8654 /* DeviceTypeCollector.m */,
+				152D835C171EE298008F8654 /* LanguageCollector.h */,
+				152D835D171EE299008F8654 /* LanguageCollector.m */,
+				152D835E171EE299008F8654 /* MobileCountryCodeCollector.h */,
+				152D835F171EE299008F8654 /* MobileCountryCodeCollector.m */,
+				152D8360171EE299008F8654 /* MobileNetworkCodeCollector.h */,
+				152D8361171EE299008F8654 /* MobileNetworkCodeCollector.m */,
+				152D8362171EE299008F8654 /* TimeZoneCollector.h */,
+				152D8363171EE299008F8654 /* TimeZoneCollector.m */,
+				152D8364171EE29A008F8654 /* UserAgentCollector.h */,
+				152D8365171EE29A008F8654 /* UserAgentCollector.m */,
+			);
+			name = OneShotContextElementCollectors;
+			path = Classes/OnShotContextElement;
+			sourceTree = "<group>";
+		};
+		8769F046169C6770008A8E0A /* PeriodicContextElementCollectors */ = {
+			isa = PBXGroup;
+			children = (
+				158F89971760E2300018ACFF /* BatteryLevelPeriodicCollector.h */,
+				158F89981760E2300018ACFF /* BatteryLevelPeriodicCollector.m */,
+				158F89991760E2300018ACFF /* GeolocationPeriodicCollector.h */,
+				158F899A1760E2300018ACFF /* GeolocationPeriodicCollector.m */,
+				158F89901760DAD50018ACFF /* AccelerometerPeriodicCollector.h */,
+				158F89911760DAD50018ACFF /* AccelerometerPeriodicCollector.m */,
+			);
+			name = PeriodicContextElementCollectors;
+			path = Classes/PeriodicContextElement;
+			sourceTree = "<group>";
+		};
+		8769F067169C6866008A8E0A /* Librairies */ = {
+			isa = PBXGroup;
+			children = (
+				8769F068169C687D008A8E0A /* Reachability */,
+			);
+			name = Librairies;
+			sourceTree = "<group>";
+		};
+		8769F068169C687D008A8E0A /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				8769F069169C687D008A8E0A /* MBReachability.h */,
+				8769F06A169C687D008A8E0A /* MBReachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		876C37C616A54D4A00FBB1D3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				152D8329171ED3E2008F8654 /* ContextElement.h */,
+				152D832A171ED3E2008F8654 /* ContextElement.m */,
+				152D837E171EE317008F8654 /* AccelerometerData.h */,
+				152D837F171EE317008F8654 /* AccelerometerData.m */,
+				152D8346171EE1C7008F8654 /* GeoLocData.h */,
+				152D8347171EE1C7008F8654 /* GeoLocData.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9B29F2B516B59011009C336B /* ContextAwareTests */ = {
+			isa = PBXGroup;
+			children = (
+				9BE0DFE916B5BB9F00A9F29D /* SupportedFiles */,
+				9BE0DFD616B5A92900A9F29D /* Libraries */,
+				9B29F2D216B5917A009C336B /* Tests Framework */,
+				878FE77516B6B9A10062221B /* ContextAwareManagerTest.m */,
+				878FE78816B6DCB10062221B /* ContextCollectorTest.m */,
+				8769128916B80C04007245F4 /* LanguageCollectorTest.m */,
+			);
+			path = ContextAwareTests;
+			sourceTree = "<group>";
+		};
+		9B29F2D216B5917A009C336B /* Tests Framework */ = {
+			isa = PBXGroup;
+			children = (
+				878FE78516B6BCB10062221B /* libsqlite3.dylib */,
+				878FE78316B6BC980062221B /* Security.framework */,
+				878FE78116B6BC740062221B /* CFNetwork.framework */,
+				878FE77F16B6BC6E0062221B /* SystemConfiguration.framework */,
+				878FE77D16B6BC620062221B /* libstdc++.dylib */,
+				878FE77B16B6BC530062221B /* libz.dylib */,
+				9BE0DFE616B5AE4B00A9F29D /* OCMock.framework */,
+				9BE0DFE416B5AE3D00A9F29D /* GHUnitIOS.framework */,
+				9BE0DFC616B5994100A9F29D /* QuartzCore.framework */,
+				9BE0DFD716B5A92900A9F29D /* libOCMock.a */,
+			);
+			name = "Tests Framework";
+			sourceTree = "<group>";
+		};
+		9BE0DFD616B5A92900A9F29D /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				9BE0DFD816B5A92900A9F29D /* OCMock */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		9BE0DFD816B5A92900A9F29D /* OCMock */ = {
+			isa = PBXGroup;
+			children = (
+				9BE0DFD916B5A92900A9F29D /* NSNotificationCenter+OCMAdditions.h */,
+				9BE0DFDA16B5A92900A9F29D /* OCMArg.h */,
+				9BE0DFDB16B5A92900A9F29D /* OCMConstraint.h */,
+				9BE0DFDC16B5A92900A9F29D /* OCMock.h */,
+				9BE0DFDD16B5A92900A9F29D /* OCMockObject.h */,
+				9BE0DFDE16B5A92900A9F29D /* OCMockRecorder.h */,
+			);
+			path = OCMock;
+			sourceTree = "<group>";
+		};
+		9BE0DFE916B5BB9F00A9F29D /* SupportedFiles */ = {
+			isa = PBXGroup;
+			children = (
+				9BE0DFEA16B5BB9F00A9F29D /* ContextAwareTests-Info.plist */,
+				9BE0DFEB16B5BB9F00A9F29D /* ContextAwareTests-Prefix.pch */,
+				9BE0DFEC16B5BB9F00A9F29D /* GHUnitIOSTestMain.m */,
+				9BE0DFED16B5BB9F00A9F29D /* InfoPlist.strings */,
+			);
+			path = SupportedFiles;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		155D7F50181EA79D008EFD89 /* ContextAwareLib64 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 155D7F77181EA79D008EFD89 /* Build configuration list for PBXNativeTarget "ContextAwareLib64" */;
+			buildPhases = (
+				155D7F53181EA79D008EFD89 /* Sources */,
+				155D7F6F181EA79D008EFD89 /* Frameworks */,
+				155D7F75181EA79D008EFD89 /* Copy Libraries and Headers For Distribution */,
+				155D7F76181EA79D008EFD89 /* Run Doxygen */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				155D7F51181EA79D008EFD89 /* PBXTargetDependency */,
+			);
+			name = ContextAwareLib64;
+			productName = ContextAware;
+			productReference = 155D7F7A181EA79D008EFD89 /* libContextAwareLib64.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		8769EFE9169C6018008A8E0A /* ContextAwareLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8769F00F169C6018008A8E0A /* Build configuration list for PBXNativeTarget "ContextAwareLib" */;
+			buildPhases = (
+				8769EFE6169C6018008A8E0A /* Sources */,
+				8769EFE7169C6018008A8E0A /* Frameworks */,
+				8769F019169C62FE008A8E0A /* Copy Libraries and Headers For Distribution */,
+				8769F01A169C6353008A8E0A /* Run Doxygen */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				152D83B71721943F008F8654 /* PBXTargetDependency */,
+			);
+			name = ContextAwareLib;
+			productName = ContextAware;
+			productReference = 8769EFEA169C6018008A8E0A /* libMotwinContextAwareLibDebug-iphoneos.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9B29F2AE16B59011009C336B /* ContextAwareTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B29F2CD16B59011009C336B /* Build configuration list for PBXNativeTarget "ContextAwareTests" */;
+			buildPhases = (
+				9B29F2AB16B59011009C336B /* Sources */,
+				9B29F2AC16B59011009C336B /* Frameworks */,
+				9B29F2AD16B59011009C336B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8798D7C616DB63C400ABC09F /* PBXTargetDependency */,
+			);
+			name = ContextAwareTests;
+			productName = ContextAwareTests;
+			productReference = 9B29F2AF16B59011009C336B /* ContextAwareTests.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8769EFE1169C6018008A8E0A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = Motwin;
+			};
+			buildConfigurationList = 8769EFE4169C6018008A8E0A /* Build configuration list for PBXProject "ContextAwareLib" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8769EFDF169C6018008A8E0A;
+			productRefGroup = 8769EFEB169C6018008A8E0A /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 152D83971721923A008F8654 /* Products */;
+					ProjectRef = 152D83961721923A008F8654 /* MotwinPlatform.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				8769EFE9169C6018008A8E0A /* ContextAwareLib */,
+				155D7F50181EA79D008EFD89 /* ContextAwareLib64 */,
+				9B29F2AE16B59011009C336B /* ContextAwareTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		152D839E1721923B008F8654 /* libMotwinPlatformDebug-iphoneos.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libMotwinPlatformDebug-iphoneos.a";
+			remoteRef = 152D839D1721923B008F8654 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		152D83A01721923B008F8654 /* libMotwinConnectorPluginDebug-iphoneos.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libMotwinConnectorPluginDebug-iphoneos.a";
+			remoteRef = 152D839F1721923B008F8654 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		152D83A21721923B008F8654 /* UnitTests.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = UnitTests.app;
+			remoteRef = 152D83A11721923B008F8654 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		155D7F7F181EA79D008EFD89 /* libMotwinPlatform64.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			name = libMotwinPlatform64.a;
+			path = "libMotwinPlatform copy.a";
+			remoteRef = 155D7F7E181EA79D008EFD89 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9B29F2AD16B59011009C336B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BE0DFEE16B5BB9F00A9F29D /* ContextAwareTests-Info.plist in Resources */,
+				9BE0DFF016B5BB9F00A9F29D /* InfoPlist.strings in Resources */,
+				8769128416B7C3D3007245F4 /* ContextAware.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		155D7F75181EA79D008EFD89 /* Copy Libraries and Headers For Distribution */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Libraries and Headers For Distribution";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export LIB_DIR=${PROJECT_DIR}/../Distribution/${CONFIGURATION}/${TARGET_NAME}/Libraries\nexport HEADERS_DIR=${PROJECT_DIR}/../Distribution/${CONFIGURATION}/${TARGET_NAME}/Headers\n\nif ! [ -d ${LIB_DIR} ]\nthen\nmkdir -p ${LIB_DIR}\nfi\n\nif ! [ -d ${HEADERS_DIR} ]\nthen\nmkdir -p ${HEADERS_DIR}\nfi\n\ncp -fr ${BUILT_PRODUCTS_DIR}/lib${PRODUCT_NAME}.a ${LIB_DIR}\n\n# main headers\ncp -fr  ${PROJECT_DIR}/Classes/ContextAwareConstants.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/ContextAwareManager.h ${HEADERS_DIR}\n\n# Collectors\ncp -fr  ${PROJECT_DIR}/Classes/PeriodicCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/OnChangeCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/ContextCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/ContextElement.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/ContextAware.h ${HEADERS_DIR}\n\n# OneShotCollectors\ncp -fr  ${PROJECT_DIR}/Classes/OneShotCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/AppNameCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/AppVersionCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/DeviceOSCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/DeviceOSVersionCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/DeviceTypeCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/LanguageCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/MobileCountryCodeCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/MobileNetworkCodeCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/TimeZoneCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/UserAgentCollector.h ${HEADERS_DIR}\n\n# OnChangeCollectors\ncp -fr  ${PROJECT_DIR}/Classes/TagCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/CrashEventCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/DataNetworkTypeCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/GeolocationCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/ScreenOrientationCollector.h ${HEADERS_DIR}\n\n# PeriodicCollectors\ncp -fr  ${PROJECT_DIR}/Classes/AccelerometerPeriodicCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/BatteryLevelPeriodicCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/GeolocationPeriodicCollector.h ${HEADERS_DIR}\n\n";
+		};
+		155D7F76181EA79D008EFD89 /* Run Doxygen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Doxygen";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd ${PROJECT_DIR}/Documentation\nchmod 755 ./MakeDoc.sh\n./MakeDoc.sh ${CONFIGURATION}\nrm -f ./doxyWarn.log\nexit 0\n";
+		};
+		8769F019169C62FE008A8E0A /* Copy Libraries and Headers For Distribution */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Libraries and Headers For Distribution";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export LIB_DIR=${PROJECT_DIR}/../Distribution/${CONFIGURATION}/${TARGET_NAME}/Libraries\nexport HEADERS_DIR=${PROJECT_DIR}/../Distribution/${CONFIGURATION}/${TARGET_NAME}/Headers\n\nif ! [ -d ${LIB_DIR} ]\nthen\nmkdir -p ${LIB_DIR}\nfi\n\nif ! [ -d ${HEADERS_DIR} ]\nthen\nmkdir -p ${HEADERS_DIR}\nfi\n\ncp -fr ${BUILT_PRODUCTS_DIR}/lib${PRODUCT_NAME}.a ${LIB_DIR}\n\n# main headers\ncp -fr  ${PROJECT_DIR}/Classes/ContextAwareConstants.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/ContextAwareManager.h ${HEADERS_DIR}\n\n# Collectors\ncp -fr  ${PROJECT_DIR}/Classes/PeriodicCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/OnChangeCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/ContextCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/ContextElement.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/ContextAware.h ${HEADERS_DIR}\n\n# OneShotCollectors\ncp -fr  ${PROJECT_DIR}/Classes/OneShotCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/AppNameCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/AppVersionCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/DeviceOSCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/DeviceOSVersionCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/DeviceTypeCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/LanguageCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/MobileCountryCodeCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/MobileNetworkCodeCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/TimeZoneCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/UserAgentCollector.h ${HEADERS_DIR}\n\n# OnChangeCollectors\ncp -fr  ${PROJECT_DIR}/Classes/TagCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/CrashEventCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/DataNetworkTypeCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/GeolocationCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/ScreenOrientationCollector.h ${HEADERS_DIR}\n\n# PeriodicCollectors\ncp -fr  ${PROJECT_DIR}/Classes/AccelerometerPeriodicCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/BatteryLevelPeriodicCollector.h ${HEADERS_DIR}\ncp -fr  ${PROJECT_DIR}/Classes/GeolocationPeriodicCollector.h ${HEADERS_DIR}\n\n";
+		};
+		8769F01A169C6353008A8E0A /* Run Doxygen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Doxygen";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd ${PROJECT_DIR}/Documentation\nchmod 755 ./MakeDoc.sh\n./MakeDoc.sh ${CONFIGURATION}\nrm -f ./doxyWarn.log\nexit 0\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		155D7F53181EA79D008EFD89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				155D7F54181EA79D008EFD89 /* MBReachability.m in Sources */,
+				155D7F55181EA79D008EFD89 /* ContextCollector.m in Sources */,
+				155D7F56181EA79D008EFD89 /* ContextElement.m in Sources */,
+				155D7F57181EA79D008EFD89 /* OnChangeCollector.m in Sources */,
+				155D7F58181EA79D008EFD89 /* CrashEventCollector.m in Sources */,
+				155D7F59181EA79D008EFD89 /* DataNetworkTypeCollector.m in Sources */,
+				155D7F5A181EA79D008EFD89 /* GeolocationCollector.m in Sources */,
+				155D7F5B181EA79D008EFD89 /* ScreenOrientationCollector.m in Sources */,
+				155D7F5C181EA79D008EFD89 /* GeoLocData.m in Sources */,
+				155D7F5D181EA79D008EFD89 /* OneShotCollector.m in Sources */,
+				155D7F5E181EA79D008EFD89 /* TagCollector.m in Sources */,
+				155D7F5F181EA79D008EFD89 /* AppNameCollector.m in Sources */,
+				155D7F60181EA79D008EFD89 /* AppVersionCollector.m in Sources */,
+				155D7F61181EA79D008EFD89 /* DeviceOSCollector.m in Sources */,
+				155D7F62181EA79D008EFD89 /* DeviceOSVersionCollector.m in Sources */,
+				155D7F63181EA79D008EFD89 /* DeviceTypeCollector.m in Sources */,
+				155D7F64181EA79D008EFD89 /* LanguageCollector.m in Sources */,
+				155D7F65181EA79D008EFD89 /* MobileCountryCodeCollector.m in Sources */,
+				155D7F66181EA79D008EFD89 /* MobileNetworkCodeCollector.m in Sources */,
+				155D7F67181EA79D008EFD89 /* TimeZoneCollector.m in Sources */,
+				155D7F68181EA79D008EFD89 /* UserAgentCollector.m in Sources */,
+				155D7F69181EA79D008EFD89 /* PeriodicCollector.m in Sources */,
+				155D7F6A181EA79D008EFD89 /* AccelerometerData.m in Sources */,
+				155D7F6B181EA79D008EFD89 /* ContextAwareManager.m in Sources */,
+				155D7F6C181EA79D008EFD89 /* AccelerometerPeriodicCollector.m in Sources */,
+				155D7F6D181EA79D008EFD89 /* BatteryLevelPeriodicCollector.m in Sources */,
+				155D7F6E181EA79D008EFD89 /* GeolocationPeriodicCollector.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8769EFE6169C6018008A8E0A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				876C37EC16A55B2D00FBB1D3 /* MBReachability.m in Sources */,
+				8769F033169C6743008A8E0A /* ContextCollector.m in Sources */,
+				152D832B171ED3E2008F8654 /* ContextElement.m in Sources */,
+				152D8333171ED42E008F8654 /* OnChangeCollector.m in Sources */,
+				152D833D171ED47A008F8654 /* CrashEventCollector.m in Sources */,
+				152D833F171ED47A008F8654 /* DataNetworkTypeCollector.m in Sources */,
+				152D8341171ED47A008F8654 /* GeolocationCollector.m in Sources */,
+				152D8343171ED47A008F8654 /* ScreenOrientationCollector.m in Sources */,
+				152D8348171EE1C7008F8654 /* GeoLocData.m in Sources */,
+				152D834C171EE226008F8654 /* OneShotCollector.m in Sources */,
+				152D8350171EE23C008F8654 /* TagCollector.m in Sources */,
+				152D8366171EE29A008F8654 /* AppNameCollector.m in Sources */,
+				152D8368171EE29A008F8654 /* AppVersionCollector.m in Sources */,
+				152D836A171EE29A008F8654 /* DeviceOSCollector.m in Sources */,
+				152D836C171EE29A008F8654 /* DeviceOSVersionCollector.m in Sources */,
+				152D836E171EE29A008F8654 /* DeviceTypeCollector.m in Sources */,
+				152D8370171EE29A008F8654 /* LanguageCollector.m in Sources */,
+				152D8372171EE29A008F8654 /* MobileCountryCodeCollector.m in Sources */,
+				152D8374171EE29A008F8654 /* MobileNetworkCodeCollector.m in Sources */,
+				152D8376171EE29A008F8654 /* TimeZoneCollector.m in Sources */,
+				152D8378171EE29A008F8654 /* UserAgentCollector.m in Sources */,
+				152D837C171EE2F3008F8654 /* PeriodicCollector.m in Sources */,
+				152D8380171EE317008F8654 /* AccelerometerData.m in Sources */,
+				152D8390171EE4EF008F8654 /* ContextAwareManager.m in Sources */,
+				158F89921760DAD50018ACFF /* AccelerometerPeriodicCollector.m in Sources */,
+				158F899B1760E2300018ACFF /* BatteryLevelPeriodicCollector.m in Sources */,
+				158F899C1760E2300018ACFF /* GeolocationPeriodicCollector.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B29F2AB16B59011009C336B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BE0DFEF16B5BB9F00A9F29D /* GHUnitIOSTestMain.m in Sources */,
+				878FE77616B6B9A10062221B /* ContextAwareManagerTest.m in Sources */,
+				878FE77816B6BBD30062221B /* ContextCollector.m in Sources */,
+				878FE78916B6DCB10062221B /* ContextCollectorTest.m in Sources */,
+				8769128A16B80C04007245F4 /* LanguageCollectorTest.m in Sources */,
+				152D832C171ED3E2008F8654 /* ContextElement.m in Sources */,
+				152D8334171ED42E008F8654 /* OnChangeCollector.m in Sources */,
+				152D833E171ED47A008F8654 /* CrashEventCollector.m in Sources */,
+				152D8340171ED47A008F8654 /* DataNetworkTypeCollector.m in Sources */,
+				152D8342171ED47A008F8654 /* GeolocationCollector.m in Sources */,
+				152D8344171ED47A008F8654 /* ScreenOrientationCollector.m in Sources */,
+				152D8349171EE1C7008F8654 /* GeoLocData.m in Sources */,
+				152D834D171EE226008F8654 /* OneShotCollector.m in Sources */,
+				152D8351171EE23C008F8654 /* TagCollector.m in Sources */,
+				152D8367171EE29A008F8654 /* AppNameCollector.m in Sources */,
+				152D8369171EE29A008F8654 /* AppVersionCollector.m in Sources */,
+				152D836B171EE29A008F8654 /* DeviceOSCollector.m in Sources */,
+				152D836D171EE29A008F8654 /* DeviceOSVersionCollector.m in Sources */,
+				152D836F171EE29A008F8654 /* DeviceTypeCollector.m in Sources */,
+				152D8371171EE29A008F8654 /* LanguageCollector.m in Sources */,
+				152D8373171EE29A008F8654 /* MobileCountryCodeCollector.m in Sources */,
+				152D8375171EE29A008F8654 /* MobileNetworkCodeCollector.m in Sources */,
+				152D8377171EE29A008F8654 /* TimeZoneCollector.m in Sources */,
+				152D8379171EE29A008F8654 /* UserAgentCollector.m in Sources */,
+				152D837D171EE2F3008F8654 /* PeriodicCollector.m in Sources */,
+				152D8381171EE317008F8654 /* AccelerometerData.m in Sources */,
+				152D8391171EE4F0008F8654 /* ContextAwareManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		152D83B71721943F008F8654 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MotwinPlatform;
+			targetProxy = 152D83B61721943F008F8654 /* PBXContainerItemProxy */;
+		};
+		155D7F51181EA79D008EFD89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MotwinPlatform;
+			targetProxy = 155D7F52181EA79D008EFD89 /* PBXContainerItemProxy */;
+		};
+		8798D7C616DB63C400ABC09F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8769EFE9169C6018008A8E0A /* ContextAwareLib */;
+			targetProxy = 8798D7C516DB63C400ABC09F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		155D7F78181EA79D008EFD89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				DSTROOT = /tmp/ContextAware.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/UnitTestFrameWork\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Classes/ContextAwareLib-Prefix.pch";
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/MotwinPlatform.sdk/Libraries\"",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "ContextAwareLib copy";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Classes/** \"$(SRCROOT)/../SDK\"/**";
+			};
+			name = Debug;
+		};
+		155D7F79181EA79D008EFD89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				DSTROOT = /tmp/ContextAware.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/UnitTestFrameWork\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Classes/ContextAwareLib-Prefix.pch";
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/MotwinPlatform.sdk/Libraries\"",
+				);
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "ContextAwareLib copy";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Classes/** \"$(SRCROOT)/../SDK\"/**";
+			};
+			name = Release;
+		};
+		8769F00D169C6018008A8E0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				"ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				"VALID_ARCHS[sdk=iphonesimulator*]" = i386;
+			};
+			name = Debug;
+		};
+		8769F00E169C6018008A8E0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				"ARCHS[sdk=iphonesimulator*]" = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				"VALID_ARCHS[sdk=iphonesimulator*]" = i386;
+			};
+			name = Release;
+		};
+		8769F010169C6018008A8E0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				DSTROOT = /tmp/ContextAware.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/UnitTestFrameWork\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Classes/ContextAwareLib-Prefix.pch";
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/MotwinPlatform.sdk/Libraries\"",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "Motwin$(TARGET_NAME)$(CONFIGURATION)-$(PLATFORM_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Classes/** \"$(SRCROOT)/../SDK\"/**";
+			};
+			name = Debug;
+		};
+		8769F011169C6018008A8E0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				DSTROOT = /tmp/ContextAware.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/UnitTestFrameWork\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Classes/ContextAwareLib-Prefix.pch";
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/MotwinPlatform.sdk/Libraries\"",
+				);
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "Motwin$(TARGET_NAME)-$(PLATFORM_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Classes/** \"$(SRCROOT)/../SDK\"/**";
+			};
+			name = Release;
+		};
+		9B29F2CE16B59011009C336B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/UnitTestFrameWork\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ContextAwareTests/SupportedFiles/ContextAwareTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "ContextAwareTests/SupportedFiles/ContextAwareTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ContextAwareTests/Libraries\"/**",
+					"\"$(SRCROOT)/MotwinPlatform.sdk/Libraries\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "/Users/product/Documents/workspace/iPhoneSDK-trunk/SDK/**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9B29F2CF16B59011009C336B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/UnitTestFrameWork\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ContextAwareTests/SupportedFiles/ContextAwareTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "ContextAwareTests/SupportedFiles/ContextAwareTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ContextAwareTests/Libraries\"/**",
+					"\"$(SRCROOT)/MotwinPlatform.sdk/Libraries\"",
+				);
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "/Users/product/Documents/workspace/iPhoneSDK-trunk/SDK/**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		155D7F77181EA79D008EFD89 /* Build configuration list for PBXNativeTarget "ContextAwareLib64" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				155D7F78181EA79D008EFD89 /* Debug */,
+				155D7F79181EA79D008EFD89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8769EFE4169C6018008A8E0A /* Build configuration list for PBXProject "ContextAwareLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8769F00D169C6018008A8E0A /* Debug */,
+				8769F00E169C6018008A8E0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8769F00F169C6018008A8E0A /* Build configuration list for PBXNativeTarget "ContextAwareLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8769F010169C6018008A8E0A /* Debug */,
+				8769F011169C6018008A8E0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B29F2CD16B59011009C336B /* Build configuration list for PBXNativeTarget "ContextAwareTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B29F2CE16B59011009C336B /* Debug */,
+				9B29F2CF16B59011009C336B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8769EFE1169C6018008A8E0A /* Project object */;
+}

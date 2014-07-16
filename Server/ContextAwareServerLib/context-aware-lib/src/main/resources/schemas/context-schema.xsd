@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright Motwin Inc. - 2013
+ * http://www.motwin.com
+ * 
+ * All rights reserved.
+ */
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://central.motwin.net/schema/context" xmlns:tns="http\://central.motwin.net/schema/context.xsd"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+	<xsd:import namespace="http://www.springframework.org/schema/beans" />
+
+	<xsd:element name="handler">
+		<xsd:complexType>
+
+			<xsd:sequence>
+				<xsd:choice minOccurs="0" maxOccurs="1">
+					<xsd:element ref="beans:bean" />
+					<xsd:element ref="beans:ref" />
+				</xsd:choice>
+			</xsd:sequence>
+
+			<xsd:attribute name="id" type="xsd:string" use="required" />
+			<xsd:attribute name="class" type="xsd:string" use="optional" />
+			<xsd:attribute name="ref" type="xsd:string" use="optional" />
+				
+		</xsd:complexType>
+	</xsd:element>
+
+</xsd:schema>

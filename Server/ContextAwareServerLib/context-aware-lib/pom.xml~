@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.motwin.context</groupId>
+    <artifactId>context-aware-parent</artifactId>
+    <version>3.4.0.BUILD-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>context-aware-lib</artifactId>
+  <name>context-aware-lib</name>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>pack-project</id>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+            <configuration>
+              <finalName>${project.artifactId}-${project.version}</finalName>
+              <tarLongFileMode>gnu</tarLongFileMode>
+              <descriptorRefs>
+                <descriptorRef>project</descriptorRef>
+              </descriptorRefs>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <configuration>
+          <charset>UTF-8</charset>
+          <docencoding>UTF-8</docencoding>
+          <docfilessubdirs>true</docfilessubdirs>
+          <show>public</show>
+          <verbose>true</verbose>
+          <debug>true</debug>
+          <source>1.6</source>
+          <excludePackageNames>*.impl:*.utils:*.namespace:*.parser:*.spring</excludePackageNames>
+
+          <reportOutputDirectory>../doc/server/Context_aware_API_Documentation</reportOutputDirectory>
+          <sourcepath>${basedir}/src/main/java;${basedir}/../context-handler-uis/src/main/java</sourcepath>
+        </configuration>
+      </plugin>      
+    </plugins>
+  </build>
+</project>

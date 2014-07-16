@@ -1,0 +1,71 @@
+.TH "cmidg_getting_started" 3 "Wed Jul 16 2014" "Version ${project.version}" "context-aware-doc" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+cmidg_getting_started \- Getting Started 
+This document describe how to use the ContextAware library, it will present snippets code for detailing the features exposed by the library\&.
+.SH "Create a new project"
+.PP
+.IP "1." 4
+Launch Xcode 
+.PD 0
+
+.IP "  \(bu" 4
+Choose \fBCreate new project\fP 
+.IP "  \(bu" 4
+Choose IOS > application > Empty Application
+.PP
+
+.IP "2." 4
+Import \fBMotwinPlatform SDK\fP library using option \fBAdd File to \&.\&.\&.\fP
+.IP "3." 4
+Import the \fBContextAware\fP library using option \fBAdd File to \&.\&.\&.\fP
+.PP
+.SH "Compilation Notes"
+.PP
+.PD 0
+.IP "\(bu" 2
+It is mandatory to import the following Apple's frameworks: \fBCoreLocation, CoreTelephony, CoreMotion\&.\fP 
+.IP "\(bu" 2
+Two versions of the ContextAware library are provided, one for debug and one for release, be sure to import only one of them\&.
+.PP
+.SH "How to initialize ContextAware lib"
+.PP
+After having imported the ContextAware library, you must create a singleton \fBContextAwareManager\fP\&. Initialize the ContextAware library by passing an instance of the MNClientChannel provided by the MotwinPlatform SDK: 
+.PP
+.nf
+  //Create Motwin ClientChannel
+  
+    NSURL *url = [[NSURL alloc]initWithString:@'zsocket://replace/with/your/server/url:port'];
+    self\&.clientChannel = [[MNClientChannel alloc] initWithServerURL:url];
+    [self\&.clientChannel makeAvailableWithKey:@'mainServer'];
+    [self\&.clientChannel connect];
+          
+  //Initialize ContextAware library
+  [ContextAwareManager createManagerWithClientChannel:self\&.clientChannel];
+
+.fi
+.PP
+ 
+.PP
+\fBAttention:\fP
+.RS 4
+Make sure to setup a correct server url and port while creating the ClientChannel\&.
+.RE
+.PP
+You have to call \fBstartContextCollection\fP method to start context collection\&. 
+.PP
+.nf
+    [[ContextAwareManager sharedManager] startContextCollection];
+
+.fi
+.PP
+.PP
+You can also suspend context collection at any time by calling to \fBstopContextCollection\fP method: 
+.PP
+.nf
+    [[ContextAwareManager sharedManager] stopContextCollection];
+
+.fi
+.PP
+ 

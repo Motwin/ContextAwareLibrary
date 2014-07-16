@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ${project.groupId}.${project.artifactId}
+Bundle-Version: ${project.version}
+Bundle-SymbolicName: ${project.groupId}.${project.artifactId}
+Spring-Context: META-INF/spring/*.xml;wait-for-dependencies:=true;publish-context:=false
+Import-Library: com.motwin.sdk;version="${sdk.range.version}",
+ org.springframework.spring;version="${spring.range.version}"
+Import-Template: 
+ com.google.common.*;version=13,
+ org.slf4j.*;version="1.6",
+ org.springframework.*;version="${spring.range.version}",
+ com.motwin.sdk.application.*;version="${sdk.range.version}"
+

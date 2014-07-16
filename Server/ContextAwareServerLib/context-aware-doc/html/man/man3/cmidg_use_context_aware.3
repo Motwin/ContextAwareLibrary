@@ -1,0 +1,104 @@
+.TH "cmidg_use_context_aware" 3 "Wed Jul 16 2014" "Version ${project.version}" "context-aware-doc" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+cmidg_use_context_aware \- How to use contextElement 
+There are two modes to enable/disable a contextElement: 
+.PD 0
+
+.IP "\(bu" 2
+at run time, 
+.IP "\(bu" 2
+at compile time\&.
+.PP
+.SH "How to enable or disable a contextElement at compile time"
+.PP
+You can enable or disable a contextElement using the \fBContextAware\&.plist\fP file\&.
+.PP
+.PP
+To enable a contextElement: 
+.PD 0
+
+.IP "\(bu" 2
+For \fBonShot\fP or \fBonChange\fP contextElement, just turn its value to \fBYES\fP\&. 
+.IP "\(bu" 2
+For \fBperiodic\fP contextElement turn its \fBActivated\fP property to \fBYES\fP\&. 
+.br
+
+.PP
+To disable a contextElement:
+.PP
+.PD 0
+.IP "\(bu" 2
+For \fBonShot\fP or \fBonChange\fP contextElement, just turn its value to \fBNO\fP\&. 
+.IP "\(bu" 2
+For \fBperiodic\fP contextElement turn its \fBActivated\fP property to \fBNO\fP\&. 
+.br
+
+.PP
+\fBAttention:\fP
+.RS 4
+Do not change the keys, the properties names and their types specified in the \fBContextAware\&.plist\fP file\&.
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+.PD 0
+.IP "\(bu" 2
+The value unit of the property \fB'Periodicity'\fP is the seconds\&. 
+.IP "\(bu" 2
+The value unit of properties \fBAccuracy\fP and \fBDistance\fP are in meters\&.
+.PP
+.RE
+.PP
+.SH "How to enable or disable a contextElement at run time"
+.PP
+The manager exposes methods to enable or disable a specific contextElement\&.
+.SH "Activate a contextElement"
+.PP
+To enable a specific contextElement, call \fBenableContextElement\fP method\&. 
+.br
+ For example, The following code allow to enable the Language contextElement:
+.PP
+.PP
+.nf
+    [[ContextAwareManager sharedManager] enableContextElement:Language];
+.fi
+.PP
+.PP
+ContextAwareManager exposes a method allow to enable a specific contextElement with some properties\&. This method is used for periodic contextElement\&. 
+.br
+ For example, the following code allow to enable the geolocation contextElement:
+.PP
+.PP
+.nf
+     // For example, We set Distance filter to 100 meters and Accurancy to 100 meters\&.
+     NSDictionary *properties = @{DISTANCE_FILTER : [NSNumber numberWithInt:100], ACCURACY: [NSNumber numberWithInt:100]};
+    
+    [[ContextAwareManager sharedManager] enableContextElement:GEOLOCATION
+                                               withProperties:properties];
+.fi
+.PP
+.SH "Disable a contextElement"
+.PP
+To disable a contextElement, call \fBdisableContextElement\fP method as follow: 
+.br
+ For example, The following code allow to disable the Language contextElement:
+.PP
+.PP
+.nf
+    [[ContextAwareManager sharedManager] disableContextElement:Language];
+.fi
+.PP
+.PP
+\fBNote:\fP
+.RS 4
+Refer to \fBContextAwareCollectors\&.h\fP file to get contextElement collectors name and properties\&. 
+.RE
+.PP
+\fBAttention:\fP
+.RS 4
+Don't change the content of \fBContextAwareCollectors\&.h\fP file\&. 
+.RE
+.PP
+

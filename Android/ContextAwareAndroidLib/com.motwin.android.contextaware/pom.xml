@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.motwin.android</groupId>
+    <artifactId>com.motwin.android.contextaware.parent</artifactId>
+    <version>3.4.0-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>com.motwin.android.contextaware</artifactId>
+  <packaging>jar</packaging>
+  <name>Motwin Android Context Aware Lib</name>
+
+  <profiles>
+    <profile>
+      <id>standard</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>com.github.wvengen</groupId>
+            <artifactId>proguard-maven-plugin</artifactId>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <version>2.7</version>
+            <configuration>
+              <charset>UTF-8</charset>
+              <docencoding>UTF-8</docencoding>
+              <docfilessubdirs>true</docfilessubdirs>
+              <show>protected</show>
+              <verbose>true</verbose>
+              <debug>true</debug>
+              <source>1.6</source>
+              <excludePackageNames>com.motwin.android.context.impl</excludePackageNames>
+              <reportOutputDirectory>../doc/android/ContextAwareLib_API_Documentation</reportOutputDirectory>
+              <sourcepath>${basedir}/src/main/java</sourcepath>
+            </configuration>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>jar</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-assembly-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>pack-dependencies</id>
+                <phase>package</phase>
+                <goals>
+                  <goal>single</goal>
+                </goals>
+                <configuration>
+                  <attach>true</attach>
+                  <appendAssemblyId>false</appendAssemblyId>
+                  <descriptors>
+                    <descriptor>assembly.xml</descriptor>
+                  </descriptors>
+                  <tarLongFileMode>gnu</tarLongFileMode>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+         <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>build-helper-maven-plugin</artifactId>
+         </plugin>          
+        </plugins>
+      </build>
+    </profile>
+
+    <profile>
+      <id>emma</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+            <artifactId>android-maven-plugin</artifactId>
+            <extensions>true</extensions>
+            <configuration>
+              <emma>
+                <enable>true</enable>
+                <classFolders>${project.basedir}/target/classes/</classFolders>
+                <outputMetaFile>${project.basedir}/target/emma/coverage.em</outputMetaFile>
+              </emma>
+              <dex>
+                <!-- must be set for emma -->
+                <noLocals>true</noLocals>
+              </dex>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+
+  <build>
+    <finalName>context-aware-android-lib-${project.version}</finalName>
+    <plugins>
+      <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <artifactId>maven-source-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <artifactId>maven-dependency-plugin</artifactId>
+      </plugin>
+      <plugin>
+       <!-- Android maven plugin does not support update-manifest for packaging that is not apk, apklib and aar -->
+        <groupId>com.motwin.utils.maven</groupId>
+        <artifactId>android-manifest-plugin</artifactId>
+      </plugin>     
+    </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.google.android</groupId>
+      <artifactId>android</artifactId>
+      <!-- a higher version than the one defined in the parent is required -->
+      <version>2.2.1</version><!--$NO-MVN-MAN-VER$ -->
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.google.android</groupId>
+      <artifactId>support-v4</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>commons-lang</groupId>
+      <artifactId>commons-lang</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.motwin.android</groupId>
+      <artifactId>com.motwin.android.sdk</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+  </dependencies>
+
+</project>

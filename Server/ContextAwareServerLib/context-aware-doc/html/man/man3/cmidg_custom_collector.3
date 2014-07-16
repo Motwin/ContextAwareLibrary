@@ -1,0 +1,109 @@
+.TH "cmidg_custom_collector" 3 "Wed Jul 16 2014" "Version ${project.version}" "context-aware-doc" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+cmidg_custom_collector \- How to add Custom contextElement collector 
+ContextAwareManager exposes methods that allow to register custom contextElement collector\&.
+.SH "Create the custom contextAware collector"
+.PP
+We will demonstrate in this section how to create a custom contextCollector\&. For example, we will create a collector allows collection and sending the current date every hour\&.
+.PP
+The custom contextElement collector must inherit from the \fBContextCollector\fP class\&.
+.PP
+.PP
+.nf
+#import 'ContextCollector\&.h'
+
+@interface CustomContextCollector : ContextCollector
+\&.\&.\&.
+@end
+.fi
+.PP
+.PP
+First, if you override \fBinitWithClientChannel\fP method to initialize some attributes, you have to call the super\&.
+.PP
+.PP
+.nf
+- (ContextCollector *)initWithClientChannel:(MNClientChannel *)aClientChannel
+{
+    self  = [super initWithClientChannel:aClientChannel];
+    if(self) {
+        self\&.periodicity = [NSNumber numberWithInt:3600];
+    }
+    return self;
+}
+.fi
+.PP
+.PP
+Second, you have to override the \fBstart\fP method to begin the collection of data\&. For example, we create an object of NSRunLoop that calls the method \fBcollectDate\fP every hour\&.
+.PP
+.PP
+.nf
+- (void)start
+{
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:[self\&.periodicity intValue]
+                                                      target:self
+                                                    selector:@selector(collectDate)
+                                                    userInfo:nil
+                                                     repeats:YES];
+    
+    NSRunLoop *runner = [NSRunLoop currentRunLoop];
+    
+    [runner addTimer:timer forMode:NSDefaultRunLoopMode];
+}
+.fi
+.PP
+.PP
+The following code present the implementation of the \fBcollectDate\fP method\&.
+.PP
+.PP
+.nf
+- (void)collectDate
+{
+    NSString *currentDate   = [[NSDate date] description];
+    
+    ContextElement *contextElement = [[ContextElement alloc] initWithContextType:@'Date'
+                                                                     contextData:currentDate];
+    
+    [self sendContextElement:contextElement];
+}
+.fi
+.PP
+.PP
+The ContextElement object contains:
+.PP
+.PD 0
+.IP "\(bu" 2
+contextElementType is a string object that contains the name of the context\&. 
+.IP "\(bu" 2
+contextElementData is a string object that contains the value of the context\&.
+.PP
+To stop sending the current date, you have to override \fBstop\fP method\&.
+.PP
+.PP
+.nf
+- (void)stop
+{
+    [timer invalidate];
+}
+.fi
+.PP
+.SH "register and unRegister the custom contextAware collector"
+.PP
+To register the custom contextElement collector, create an object of your custom collector and call the \fBregisterContextCollector\fP method as follow\&.
+.PP
+.PP
+.nf
+    CustomContextCollector *customContextCollector = [[CustomContextCollector alloc] initWithClientChannel:clientChannel];
+    [[ContextAwareManager sharedManager] registerContextCollector:customContextCollector];
+.fi
+.PP
+.PP
+To unregister the custom contextElement collector, just pass the object of your collector to the \fBunRegisterContextCollector\fP method as follow:
+.PP
+.PP
+.nf
+    [[ContextAwareManager sharedManager] unRegisterContextCollector:customContextCollector];
+.fi
+.PP
+ 

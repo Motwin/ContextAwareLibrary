@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright Motwin Inc. - 2013
+ * http://www.motwin.com
+ * 
+ * All rights reserved.
+ */
+-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xmlns:ctx="http://central.motwin.net/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+        http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
+        http://central.motwin.net/schema/context http://central.motwin.net/schema/context.xsd">
+	
+	<import resource="classpath:META-INF/motwin/context-aware/motwin-context.xml"/>
+
+	<bean id="contextHandlerBeanId1" name="contextHandlerBeanName1"
+		class="com.motwin.context.extension.namespace.parser.test.DummyContextHandler">
+	</bean>
+
+	<ctx:handler id="contextHandlerId1" ref="contextHandlerBeanId1"></ctx:handler>
+
+	<ctx:handler id="contextHandlerId2">
+		<bean id="contextHandlerBeanId2" name="contextHandlerBeanName2"
+			class="com.motwin.context.extension.namespace.parser.test.DummyMobileContextHandler">
+		</bean>
+	</ctx:handler>
+
+	<ctx:handler id="contextHandlerId3">
+		<ref bean="contextHandlerBeanId1" />
+	</ctx:handler>
+
+	<ctx:handler id="contextHandlerId4"
+		class="com.motwin.context.extension.namespace.parser.test.ClassAttributeContextHandler"></ctx:handler>
+
+</beans>

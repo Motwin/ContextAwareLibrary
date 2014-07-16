@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'ContextAware' target in the 'ContextAware' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import "ContextAwareConstants.h"
+#endif

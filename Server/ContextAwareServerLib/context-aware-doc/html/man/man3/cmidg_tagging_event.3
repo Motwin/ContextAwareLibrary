@@ -1,0 +1,21 @@
+.TH "cmidg_tagging_event" 3 "Wed Jul 16 2014" "Version ${project.version}" "context-aware-doc" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+cmidg_tagging_event \- How to use Tagging Api 
+Tagging Api allow to tag a viewController , an event or action\&. 
+.br
+ Tagging Api exposes a class method \fBsendTagWithName:(NSString *)aTagName;\fP it take a string object in parameter to specify the tag name\&.
+.PP
+.PP
+.nf
+    [TaggingAPI sendTagWithName:@'aTagName'];
+.fi
+.PP
+.PP
+\fBAttention:\fP
+.RS 4
+aTagName cannot be null\&. 
+.RE
+.PP
+
